@@ -86,7 +86,8 @@ exports.handler = function (event, context) {
         if (err)
         console.log(err, err.stack); // an error occurred
 
-        var params1 = {Bucket: 'BUCKET_URL_HERE', Key: hash + '.mp3', Body: data.AudioStream};
+        //Put the bucket name you want to use
+        var params1 = {Bucket: 'BUCKET_NAME_HERE', Key: hash + '.mp3', Body: data.AudioStream};
         s3.upload(params1, function(err, data1) {
           console.log(err, data1);
 
