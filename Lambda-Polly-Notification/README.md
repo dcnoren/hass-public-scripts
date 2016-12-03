@@ -19,6 +19,7 @@ Utilize AWS Polly to speak notifications to a media player on your home-assistan
 ### Usage:
 In Home Assistant configuration, here are some sample configurations:
 
+`
 notify:
 - name: "AWS Polly"
   platform: command_line
@@ -35,6 +36,6 @@ automation:
     service: notify.AWS_Polly
       data:
         message: "Hi, this is your house speaking. Welcome home!"
-
+`
 ### TO-DO
 Lots!
