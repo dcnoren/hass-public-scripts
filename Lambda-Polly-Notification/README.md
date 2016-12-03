@@ -19,8 +19,8 @@ Utilize AWS Polly to speak notifications to a media player on your home-assistan
 ### Usage:
 In Home Assistant configuration, here are some sample configurations:
 
-`
-notify:
+
+`notify:
 - name: "AWS Polly"
   platform: command_line
   command: "xargs --replace=@ curl -X GET -H 'Content-Type: application/json' -H 'x-api-key: YOUR_API_KEY' -G https://YOUR_API_ENDPOINT.us-east-1.amazonaws.com/prod --data-urlencode 'text=@'"
@@ -35,7 +35,7 @@ automation:
   action:
     service: notify.AWS_Polly
       data:
-        message: "Hi, this is your house speaking. Welcome home!"
-`
+        message: "Hi, this is your house speaking. Welcome home!"`
+
 ### TO-DO
 Lots!
