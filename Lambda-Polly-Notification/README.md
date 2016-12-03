@@ -13,8 +13,10 @@ Utilize AWS Polly to speak notifications to a media player on your home-assistan
 4. zip up node_modules and index.js into a .zip file - keep them both in top-level, not in sub-directory
 5. Upload to Lambda node.js 4.3 environment
 6. Create a IAM role that has access to S3 and Polly, and assign the Lambda function to this IAM role
+6.1. Optionally place Lambda function as a part of your VPC, if you have other services in a VPC (site-to-site VPN to home network, for example)
 7. Create a trigger for Lambda as API gateway. Make API gateway be a LAMBDA_PROXY type
 8. Create API key for API gateway, and set access as "API Required" = true
+9. Deploy API Gateway to "/prod" endpoint.
 
 ### Usage:
 In Home Assistant configuration, here are some sample configurations:
